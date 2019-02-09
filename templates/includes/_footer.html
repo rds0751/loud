@@ -1,0 +1,173 @@
+   {% load static %}
+    <!--/#clients-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center bottom-separator">
+                    <img src="{% static 'images/home/under.png' %}" class="img-responsive inline" alt="">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="testimonial bottom">
+                        <h2>Testimonial</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="{% static 'images/home/profile9.png' %}" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>AdBazzar has not only increased our visibility but also provide us full digital marketing service that encompasses social media, demand generation, digital advertising etc.</blockquote>
+                                <h3><a href="#">- The Firangipani Country Resort</a></h3>
+                            </div>
+                         </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="{% static 'images/home/profile8.png' %}" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>AdBazzar Media has been very helpful in increasing our online visibility and lead generation from ad campaigns and organic search.</blockquote>
+                                <h3><a href="">- Colinkers Event Management Pvt Ltd</a></h3>
+                            </div>
+                        </div>   
+                    </div> 
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="contact-info bottom">
+                        <h2>Contacts</h2>
+                        <address>
+                        E-mail: <a href="mailto:someone@example.com">info@adbazzar.in</a> <br> 
+                        Phone: +91 7086 170 861 <br> 
+                        </address>
+
+                        <h2>Address</h2>
+                        <address>
+                        Kang Complex, <br> 
+                        Urban Estate III, <br> 
+                        Patiala, Punjab <br> 
+                        India <br> 
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="contact-form bottom">
+                        <h2>Send a message</h2>
+                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                            </div>                        
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="copyright-text text-center">
+                       
+                    </div>
+                    <div class="copyright-text text-center">
+                        
+                            <ul class="nav nav-pills">
+                                <li><a href="https://www.facebook.com/adbazzarr/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/ad_bazzar"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCJeNlDy45w53eiYI00JE-1A"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/adbazzar/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.instagram.com/adbazzar.in/"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="button"></a>
+    <style type="text/css">
+        .button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+} </style>
+    <script type="text/javascript">
+        var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+    </script>
+    <!--/#footer-->
